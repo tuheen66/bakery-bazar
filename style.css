@@ -59,8 +59,8 @@ li {
 
 li a {
   text-decoration: none;
-   color: rgb(82, 78, 78);
-   font-size:1.5rem
+  color: rgb(82, 78, 78);
+  font-size: 1.5rem;
 }
 
 .hero {
@@ -156,8 +156,12 @@ li a {
 /*  menu page */
 
 .menu-heading {
-  width: 50%;
+  max-width: 80%;
   margin: 50px auto;
+}
+
+.menu-heading img {
+  width: 100%;
 }
 
 .menu-heading h2 {
@@ -184,7 +188,7 @@ hr {
 }
 
 .item-img {
-  width: 100px;
+  width: 150px;
   margin: 0 100px;
 }
 
@@ -208,6 +212,7 @@ hr {
 @media (max-width: 425px) {
   .nav {
     flex-direction: column;
+    justify-content: center;
   }
 
   .menu {
@@ -222,6 +227,7 @@ hr {
 
   .logo {
     margin: 0 auto;
+    justify-content: center;
   }
 
   .grid-container {
@@ -231,14 +237,52 @@ hr {
   .card-text {
     padding: 0 5px;
   }
+
+  .item-container {
+    flex-direction: column;
+  }
+
+  .item-price {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item-price p {
+    font-size: 1.5rem;
+  }
+
+  .item-price {
+    flex: 1;
+  }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
+  li {
+    margin-right: 3rem;
+  }
+
+  .logo img {
+    padding: 10px;
+  }
+
   .grid-container {
     grid-template-columns: auto auto;
   }
 
   .card-text {
     padding: 0 10px;
+  }
+
+  .item-price {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item-price p {
+    font-size: 2rem;
+  }
+
+  .item-price {
+    flex: 1;
   }
 }
